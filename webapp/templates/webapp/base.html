@@ -6,24 +6,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SAP</title>
+    
+    <!-- Bootstrap -->
+    <link href="{% static 'webapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
 </head>
 <body>
     <div style="background-color: rgb(247, 203, 85); margin: 0px auto; padding: 10px; border-radius: 5px;">
 
-        <h1 style="background-color: black; color: white;">SAP</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SAP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'personas' %}">Personas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         
-        <h3>Bienvenidx</h3>
-
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'contacto' %}">contacto</a></li>
-                <li><a href="{% url 'servicios' %}">servicios</a></li>
-                <li><a href="{% url 'personas' %}">Personas</a></li>
-                
-            </ul>
-        </nav>
         {% block content %}{% endblock %} 
     
         </div>

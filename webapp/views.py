@@ -22,8 +22,4 @@ def personas(request):
 def servicios(request):
 
     return render(request, 'webapp/servicios.html')        
-
-
-def detalle(request, id):
-    info = Persona.objects.get(id=id)
-    return render(request, 'webapp/detalle.html', {'info': info})         
+      

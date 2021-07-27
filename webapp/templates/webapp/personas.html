@@ -10,7 +10,7 @@
         <li>
         {{persona.nombre}}
         {{persona.apellido}}
-        <a href="{% url 'detalle' persona.id}">+ info</a>
+        <a href="{% url 'detalle' persona.id %}">+ info</a>
         </li>
     {% endfor %}
     </ul>
