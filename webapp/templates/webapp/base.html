@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: rgb(247, 203, 85); margin: 0px auto; padding: 10px; border-radius: 5px;">
+
+        <h1 style="background-color: black; color: white;">SAP</h1>
+        
+        <h3>Bienvenidx</h3>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'contacto' %}">contacto</a></li>
+                <li><a href="{% url 'servicios' %}">servicios</a></li>
+                <li><a href="{% url 'personas' %}">Personas</a></li>
+                
+            </ul>
+        </nav>
+        {% block content %}{% endblock %} 
+    
+        </div>
+</body>
+</html>

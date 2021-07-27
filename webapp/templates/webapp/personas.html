@@ -1,0 +1,17 @@
+{% extends 'webapp/base.html' %}
+{% block content %}   
+<h3>Personas</h3>
+  
+<h4>Cantidad de personas: {{cantidad}}</h4>
+
+<h5>Listado:</h5>
+    <ul>
+    {% for persona in personas %} 
+        <li>
+        {{persona.nombre}}
+        {{persona.apellido}}
+        <a href="{% url 'detalle' persona.id}">+ info</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
